@@ -1,7 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+}
 body {
     overflow: hidden;   
     user-select: none;
-    background-color: green;
+    background-color: white;
+    font-size:12px;
+    padding: 20px;
+    margin:0px;
     }
-    
 
+/*     
+    https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+    https://www.w3schools.com/css/css_rwd_grid.asp
+    https://www.w3schools.com/howto/howto_js_topnav_responsive.asp    */
+
+/* ====================  mobile first =====================     */
+
+
+/* ====================  desktop =====================     */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;   
+   
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+nav{
+    background-color: black;    
+    padding: 10px;
+    }
+nav a{
+    display: inline;
+    color:white;
+    text-decoration: none;
+}
+.menu{
+    text-align: right;
+}
+nav>a{
+    float: left;
+    
+    
+}
+
+.menu>a{
+   
+    padding: 10px;
+}
+.icon{
+    display: none;
+}
+.main-img>img{
+width:100%;
+}
+h2{
+    font-size: 1.2em;
+    color:rgb(92, 92, 92);
+    border-bottom:1px solid gray;
+    padding: 10px 0px 15px 0px;
+}
+
+.project{
+    padding:5px;
+    margin: 0px;
+
+}
+.project button{
+  background-color: rgb(177, 177, 177);
+  border: none;
+  text-align: center;
+  padding: 7px;
+  margin: 0px;
+  width: 100%;
+}
+.project img{
+    width:100%;
+   
+    margin:0px;
+}
+.project h4{
+    margin: 0px;
+}
+
+footer{
+    padding:10px;
+    text-align: center;
+    background-color: black;   
+    color:white; 
+}
+
+footer a{
+   
+    color:white; 
+}
