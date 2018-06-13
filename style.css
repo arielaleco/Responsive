@@ -4,16 +4,31 @@
 
 html {
     font-family: 'Lato', sans-serif;
+    font-size:12px;
 }
 body {
-    overflow: hidden;   
+   background-color: green;
     user-select: none;
     background-color: white;
-    font-size:12px;
-    padding: 20px;
+   
+    padding: 8px;
     margin:0px;
     }
 
+.main-img>img{
+        width:100%;
+        }    
+
+
+.row::after {
+            content: "";
+            clear: both;
+            display: table;
+} 
+        
+.responsive{
+
+}        
 /*     
     https://www.w3schools.com/css/css_rwd_mediaqueries.asp
     https://www.w3schools.com/css/css_rwd_grid.asp
@@ -21,19 +36,66 @@ body {
 
 /* ====================  mobile first =====================     */
 
-
-/* ====================  desktop =====================     */
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
+footer{
+    padding:10px;
+    text-align: center;
+    background-color: black;   
+    color:white; 
 }
+
+footer a{   
+    color:white; 
+}
+
+.icon{
+    display: inline;
+}
+
+
+nav{
+    background-color: black;    
+    padding: 5px;
+    }
+nav a{
+    display: inline;
+    color:white;
+    text-decoration: none;
+}
+.menu a:not(:last-child){
+    display: none;
+   
+}
+[class*="col-"] {
+    width:100%;
+   
+}
+.project img{
+    width:100%;
+   
+    margin:0px;
+}
+.menu{
+    text-align: right;
+    display: inline;
+}
+nav>a{
+    float: left;    
+}
+/* ====================  desktop =====================     */
+@media only screen and (min-width: 360px) {
+
+
+body{
+    overflow: hidden;   
+    background-color: red;
+    font-size:1em;
+}
+
 
 [class*="col-"] {
     float: left;   
    
 }
-
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -47,22 +109,18 @@ body {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-nav{
-    background-color: black;    
-    padding: 10px;
-    }
-nav a{
-    display: inline;
-    color:white;
-    text-decoration: none;
-}
+
+
+
+
+
 .menu{
-    text-align: right;
+ 
+    display: block;
 }
-nav>a{
-    float: left;
-    
-    
+
+.menu a:not(:last-child){
+    display: inline;    
 }
 
 .menu>a{
@@ -72,14 +130,13 @@ nav>a{
 .icon{
     display: none;
 }
-.main-img>img{
-width:100%;
-}
+
 h2{
     font-size: 1.2em;
     color:rgb(92, 92, 92);
     border-bottom:1px solid gray;
-    padding: 10px 0px 15px 0px;
+    padding: 5px 2px 5px 2px;
+    margin:0px;
 }
 
 .project{
@@ -95,23 +152,17 @@ h2{
   margin: 0px;
   width: 100%;
 }
-.project img{
-    width:100%;
-   
-    margin:0px;
-}
+
 .project h4{
     margin: 0px;
+    padding: 2px;
 }
 
-footer{
-    padding:10px;
-    text-align: center;
-    background-color: black;   
-    color:white; 
+.project p{
+    margin: 0px;
+    padding: 2px;
 }
 
-footer a{
-   
-    color:white; 
+
 }
+
