@@ -1,3 +1,11 @@
+/*     
+    https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+    https://www.w3schools.com/css/css_rwd_grid.asp
+    https://www.w3schools.com/howto/howto_js_topnav_responsive.asp    
+*/
+
+
+/* ====================  mobile first =====================     */
 * {
     box-sizing: border-box;
 }
@@ -7,6 +15,7 @@ html {
     font-size:12px;
 }
 body {
+    /* overflow: hidden;    */
    background-color: green;
     user-select: none;
     background-color: white;
@@ -26,16 +35,7 @@ body {
             display: table;
 } 
         
-.responsive{
-
-}        
-/*     
-    https://www.w3schools.com/css/css_rwd_mediaqueries.asp
-    https://www.w3schools.com/css/css_rwd_grid.asp
-    https://www.w3schools.com/howto/howto_js_topnav_responsive.asp    */
-
-/* ====================  mobile first =====================     */
-
+    
 footer{
     padding:10px;
     text-align: center;
@@ -47,11 +47,118 @@ footer a{
     color:white; 
 }
 
-.icon{
-    display: inline;
+[class*="col-"] {
+    width:100%;
+   
+}
+.project img{
+    width:100%;
+   
+    margin:0px;
 }
 
 
+.project button{
+    background-color: rgb(177, 177, 177);
+    border: none;
+    text-align: center;
+    padding: 7px;
+    margin: 0px;
+    width: 100%;
+  }
+  h2{
+    font-size: 1.2em;
+    color:rgb(92, 92, 92);
+    border-bottom:1px solid gray;
+    padding: 5px 2px 5px 2px;
+    margin:0px;
+}
+
+.project{
+    padding:5px;
+    margin: 0px;
+
+}
+.project h4{
+    margin: 0px;
+    padding: 2px;
+}
+.project p{
+    margin: 0px;
+    padding: 6px;
+}
+/* ------------------------ menu -------------------- */
+nav{
+    padding:0px;
+    margin:0px;
+}
+
+.menu {
+    overflow: hidden;
+    background-color: black;
+  }
+
+  .menu a:first-child {
+    padding-left:calc(100% - 250px);
+    }
+  nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2em;
+    background-color: black;
+  }
+  .menu .icon {
+    display: none;
+  }
+  .logo{
+      text-decoration: none;
+      color: #f2f2f2;
+      display: inline;
+  }
+
+  @media screen and (max-width: 360px) {
+    /* .menu a:not(:first-child) {
+        display: none;    
+    } */
+
+    .menu  a{
+        display: none;    
+    }
+
+
+    .menu a.icon {
+      float: right;
+      display: block;
+      padding: 12.5px 16px;
+    }
+  
+    .menu.responsive {
+        position: relative;
+    }
+    .menu.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .menu.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+
+/* .menu{
+    text-align: right;
+    display: inline;
+}
+nav>a{
+    float: left;    
+}
 nav{
     background-color: black;    
     padding: 5px;
@@ -65,104 +172,62 @@ nav a{
     display: none;
    
 }
-[class*="col-"] {
-    width:100%;
-   
-}
-.project img{
-    width:100%;
-   
-    margin:0px;
-}
-.menu{
-    text-align: right;
-    display: inline;
-}
-nav>a{
-    float: left;    
-}
-/* ====================  desktop =====================     */
-@media only screen and (min-width: 360px) {
-
-
-body{
-    overflow: hidden;   
-    background-color: red;
-    font-size:1em;
-}
-
-
-[class*="col-"] {
-    float: left;   
-   
-}
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-
-
-
-
-
-.menu{
- 
+.icon{
+    float: right;
     display: block;
 }
+ */
 
-.menu a:not(:last-child){
-    display: inline;    
-}
 
-.menu>a{
+/* ====================  Desktop =====================     */
+@media only screen and (min-width: 360px) {
+/* ------------------------ menu -------------------- */
+
+    
+
+
+/* .menu{ 
+        display: block;
+        
+    }
+    
+    .menu a:not(:last-child){
+        display: inline;    
+    }
+    
+    .menu>a{
+       
+        padding: 10px;
+    }
+    .icon{
+        display: none;
+    } */
+
+
+    /* //------------------------------ */
+
+    body{
+        /* overflow: hidden;    */      
+        font-size:1em;
+    }
+
+    [class*="col-"] {
+        float: left;   
+       
+    }
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+
    
-    padding: 10px;
-}
-.icon{
-    display: none;
-}
-
-h2{
-    font-size: 1.2em;
-    color:rgb(92, 92, 92);
-    border-bottom:1px solid gray;
-    padding: 5px 2px 5px 2px;
-    margin:0px;
-}
-
-.project{
-    padding:5px;
-    margin: 0px;
-
-}
-.project button{
-  background-color: rgb(177, 177, 177);
-  border: none;
-  text-align: center;
-  padding: 7px;
-  margin: 0px;
-  width: 100%;
-}
-
-.project h4{
-    margin: 0px;
-    padding: 2px;
-}
-
-.project p{
-    margin: 0px;
-    padding: 2px;
-}
-
-
-}
-
+}    
